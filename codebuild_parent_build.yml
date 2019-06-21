@@ -8,4 +8,4 @@ phases:
     commands:
       # start 4 new child builds
       # possible enhancements to this build spec: monitor the status of 4 builds from the parent build; fast fail all builds if one of the builds fail
-      - for i in {1..4}; do aws codebuild start-build --project-name CypressParallelTest --image-override cypress/included:3.2.0 --buildspec-override codebuild_child_build.yml --environment-variables-override name=PARENT_CODEBUILD_BUILD_ID,value=$CODEBUILD_BUILD_ID; done
+      - for i in `seq 4`; do aws codebuild start-build --project-name CypressParallelTest --image-override cypress/included:3.2.0 --buildspec-override codebuild_child_build.yml --environment-variables-override name=PARENT_CODEBUILD_BUILD_ID,value=$CODEBUILD_BUILD_ID; done
