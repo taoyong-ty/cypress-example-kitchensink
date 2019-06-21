@@ -11,4 +11,5 @@ phases:
   build:
     commands:
     - npm run start:ci &
+    # Cypress use the `ci-build-id` to group machines to run parallel tests
     - npm run e2e:record --record -- --parallel --group electrons --ci-build-id $PARENT_CODEBUILD_BUILD_ID  
