@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    CYPRESS_RECORD_KEY: "8a0e43df-182b-48e3-ac6c-45d6c1c07ba7"
+    CYPRESS_RECORD_KEY: "54f1e172-e3de-4ac9-8273-d149db7b5463"
 
 phases:
   install:
@@ -12,4 +12,4 @@ phases:
     commands:
     - npm run start:ci &
     # Cypress use the `ci-build-id` to group machines to run parallel tests
-    - npm run e2e:record --record -- --parallel --group electrons --ci-build-id $PARENT_CODEBUILD_BUILD_ID  
+    - npm run e2e:record --record -- --parallel --group electrons --ci-build-id $PARENT_CODEBUILD_BUILD_ID
