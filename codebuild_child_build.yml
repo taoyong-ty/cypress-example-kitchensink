@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    CYPRESS_RECORD_KEY: "54f1e172-e3de-4ac9-8273-d149db7b5463"
+    CYPRESS_RECORD_KEY: "0a3898c7-7b2f-428a-88ba-37d06a41c4e6"
 
 phases:
   install:
