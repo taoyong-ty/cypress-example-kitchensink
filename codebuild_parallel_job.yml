@@ -1,0 +1,14 @@
+version: 0.2
+
+env:
+  variables:
+    CYPRESS_RECORD_KEY: "8a0e43df-182b-48e3-ac6c-45d6c1c07ba7"
+
+phases:
+  install:
+    commands:
+    - yarn global add serve
+  build:
+    commands:
+    - npm run start:ci &
+    - npm run e2e:record --record -- --parallel --group electrons --ci-build-id $PARENT_CODEBUILD_BUILD_ID  
